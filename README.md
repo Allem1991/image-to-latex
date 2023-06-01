@@ -98,7 +98,7 @@ python scripts/prepare_data.py
 An example command to start a training session:
 
 ```
-python scripts/run_experiment.py trainer.gpus=1 data.batch_size=4
+python scripts/run_experiment.py trainer.gpus=0 data.batch_size=16
 ```
 
 Configurations can be modified in `conf/config.yaml` or in command line. See [Hydra's documentation](https://hydra.cc/docs/intro) to learn more.
@@ -108,7 +108,7 @@ Configurations can be modified in `conf/config.yaml` or in command line. See [Hy
 The best model checkpoint will be uploaded to Weights & Biases (W&B) automatically (you will be asked to register or login to W&B before the training starts). Here is an example command to download a trained model checkpoint from W&B:
 
 ```
-python scripts/download_checkpoint.py RUN_PATH
+python scripts/download_checkpoint.py allemteam/image-to-latex/xxq8tw3i
 ```
 
 Replace RUN_PATH with the path of your run. The run path should be in the format of `<entity>/<project>/<run_id>`. To find the run path for a particular experiment run, go to the Overview tab in the dashboard.

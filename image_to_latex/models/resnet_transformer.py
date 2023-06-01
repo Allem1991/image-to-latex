@@ -31,7 +31,7 @@ class ResNetTransformer(nn.Module):
         self.pad_index = pad_index
 
         # Encoder
-        resnet = torchvision.models.resnet18(pretrained=False)
+        resnet = torchvision.models.resnet152(pretrained=False)
         self.backbone = nn.Sequential(
             resnet.conv1,
             resnet.bn1,
@@ -41,7 +41,7 @@ class ResNetTransformer(nn.Module):
             resnet.layer2,
             resnet.layer3,
         )
-        self.bottleneck = nn.Conv2d(256, self.d_model, 1)
+        self.bottleneck = nn.Conv2d(1024, self.d_model, 1)
         self.image_positional_encoder = PositionalEncoding2D(self.d_model)
 
         # Decoder

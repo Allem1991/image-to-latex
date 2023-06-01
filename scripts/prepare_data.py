@@ -53,23 +53,23 @@ def main():
         ##script = Path(__file__).resolve().parent / "find_and_replace.sh"
         ##subprocess.call(["sh", f"{str(script)}", "im2latex_formulas.norm.lst", cleaned_file])
 
-    ##print('Cleaning data...')
-    ##fr = open('../data/im2latex_formulas_norm.lst', 'r')
-    ##fw = open('../data/im2latex_formulas.norm.new.lst', 'w')
+    print('Cleaning data...')
+    fr = open('../data/im2latex_formulas_norm.lst', 'r')
+    fw = open('../data/im2latex_formulas.norm.new.lst', 'w')
 
-    ##str = fr.read()
-    ##str = str.replace('\left(', '(')
-    ##str = str.replace('\\right)', ')')
-    ##str = str.replace('\left[', '[')
-    ##str = str.replace('\\right]', ']')
-    ##str = str.replace('\left{', '{')
-    ##str = str.replace('\\right}', '}')
-    ##str = re.sub(r'\\vspace.?\{.*?\}', '', str)
-    ##str = re.sub(r'\\hspace.?\{.*?\}', '', str)
-    ##fw.write(str)
+    str = fr.read()
+    str = str.replace('\left(', '(')
+    str = str.replace('\\right)', ')')
+    str = str.replace('\left[', '[')
+    str = str.replace('\\right]', ']')
+    str = str.replace('\left{', '{')
+    str = str.replace('\\right}', '}')
+    str = re.sub(r'\\vspace.?\{.*?\}', '', str)
+    str = re.sub(r'\\hspace.?\{.*?\}', '', str)
+    fw.write(str)
 
-    ##fw.close()
-    ##fr.close()
+    fw.close()
+    fr.close()
 
     # Build vocabulary
     if not VOCAB_FILE.is_file():
