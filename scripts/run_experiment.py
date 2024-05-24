@@ -8,7 +8,7 @@ from pytorch_lightning.callbacks import Callback, EarlyStopping, ModelCheckpoint
 from pytorch_lightning.loggers.wandb import WandbLogger
 
 import sys
-sys.path.append('D:\\VKR\\image-to-latex')
+sys.path.append('D:\\image-to-latex')
 from image_to_latex.data import Im2Latex
 from image_to_latex.lit_models import LitResNetTransformer
 

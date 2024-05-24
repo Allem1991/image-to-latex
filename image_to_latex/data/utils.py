@@ -213,7 +213,7 @@ def get_split(
     formulas = []
     with open(filename) as f:
         for line in f:
-            formula_idx, img_name, _ = line.strip("\n").split()
+            img_name, formula_idx = line.strip("\n").split()
             image_names.append(img_name)
             formulas.append(all_formulas[int(formula_idx)])
     return image_names, formulas

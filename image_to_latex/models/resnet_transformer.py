@@ -31,7 +31,7 @@ class ResNetTransformer(nn.Module):
         self.pad_index = pad_index
 
         # Encoder
-        resnet = torchvision.models.resnet152(pretrained=False)
+        resnet = torchvision.models.resnet50(pretrained=False)
         self.backbone = nn.Sequential(
             resnet.conv1,
             resnet.bn1,
