@@ -98,7 +98,7 @@ python scripts/prepare_data.py
 An example command to start a training session:
 
 ```
-python scripts/run_experiment.py trainer.gpus=1 data.batch_size=4
+python scripts/run_experiment.py trainer.gpus=1 data.batch_size=16
 ```
 
 Configurations can be modified in `conf/config.yaml` or in command line. See [Hydra's documentation](https://hydra.cc/docs/intro) to learn more.
